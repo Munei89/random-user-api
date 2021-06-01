@@ -1,0 +1,31 @@
+<section>
+  <h1>Top 5 Users</h1>
+  <h2>Today</h2>
+  <div class="details" *ngFor="let randomUser of randomUsers">
+    <div
+      class="summary"
+      (mouseenter)="mouseEnter('true')"
+      (mouseleave)="mouseLeave('false')"
+    >
+      <div>
+        <span style="background-color: #f2dcbb">
+          <img src="{{ randomUser.photoUrl }}" />
+        </span>
+        <h3>
+          <strong>{{ randomUser.name }}</strong>
+          <small>{{ randomUser.email }}</small>
+        </h3>
+      </div>
+    </div>
+    <div class="row mt-5 mb-5">
+      <div class="col-12">
+        <fa-icon [icon]="faBuilding"></fa-icon> City: {{ randomUser.city }},
+        {{ randomUser.address }}
+      </div>
+      <div class="col-12">
+        <fa-icon [icon]="faPhone"></fa-icon> Phone: {{ randomUser.phone }}
+      </div>
+      <div class="col-12">Data of Birth: {{ randomUser.birthDate }}</div>
+    </div>
+  </div>
+</section>

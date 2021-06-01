@@ -1,0 +1,12 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, "Open Sans", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+}
